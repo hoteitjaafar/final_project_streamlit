@@ -91,7 +91,7 @@ layout_customer_type = go.Layout(
     xaxis = dict(showline=True, showgrid=False, showticklabels=True, linecolor='rgb(204, 204, 204)', linewidth=1, 
     ticks='outside', tickfont=dict(family='Arial', color='rgb(82, 82, 82)')),
     yaxis = dict(showgrid=False, zeroline=False, showline=False, showticklabels=False),
-    title = 'New vs Returning Customers', 
+    title = 'Revenue Produced by New & Returning Customers', 
     plot_bgcolor='white',
 )
 # Monthly Active Customers
@@ -402,23 +402,23 @@ if select_box == 'Instructions':
   st.header('What is RFM?')
   st.write('''RFM stands for Recency - Frequency - Monetary Value (Revenue).''')
   st.write('''Low Value RFM: Customers who show less activity than others, not very frequent buyer and generate very low revenue.''')
-  st.write('''Mid Value RM: These customers often use the platform, somewhat frequently and generate moderate revenue.''')
-  st.write('''High Value RM: This most important group. The customers have high activity, revenue, and frequency.''')
+  st.write('''Mid Value RFM: These customers often use the platform, somewhat frequently and generate moderate revenue.''')
+  st.write('''High Value RFM: This most important group. The customers have high activity, revenue, and frequency.''')
 
   st.header('How is Recency Calculated?')
   st.write('''We first identify most recent purchase date of the customer and see how many days he/she has been inactive for. 
-              After having the number of inactive days for the customer, we apply K-Means clustering to provide the customer a recency score and ultimately
+              After having the number of inactive days for the customer, we apply K-Means clustering to provide the customer's recency score, aultimately
               a recency cluster.''')
 
   st.header('How is Frequency Calculated?')
-  st.write('''To create frequency clusters, we need to find total number orders for each customer, and then apply K-Means clustering to provide the customer a frequency
-            score and ultimately a frequency cluster.''')
+  st.write('''To create frequency clusters, we need to find total number orders for each customer, and then apply K-Means clustering to provide the the customer's frequency
+            score, a frequency cluster.''')
 
   st.header('How is Revenue Calculated and Clustered?')
-  st.write('''The customer's revenue is calculted then provided a monetary score (revenue) or monetary value using K-Means clustering and ultimately a revenue cluster.''')
+  st.write('''The customer's revenue is calculted then provided a monetary score (revenue) or monetary value then using K-Means clustering to place in a revenue cluster.''')
 
   st.header('How Customers Segmented?')
-  st.write('''The scoring above summarizes the customers; with score 8 is our best customers whereas 0 is the worst. ''')
+  st.write('''The scoring below summarizes the customers; with score 8 is our best customers whereas 0 is the worst. ''')
   st.write('Customers with an overall score between 0-2 belong to the low value segment.')
   st.write('Customers with an overall score between 3-5 belong to the medium value segment.')
   st.write('Customers with an overall score between 6-8 belong to the high value segment.')
