@@ -21,8 +21,8 @@ st.set_page_config(layout="wide")
 
 @st.cache(allow_output_mutation=True)
 def load_data():
-    data = pd.read_csv(r'C:\Users\Admin\Desktop\PythonCodes\final_project_streamlit\final_project_streamlit\united_kingdom_retailer.csv')
-    data_2 = pd.read_csv(r'C:\Users\Admin\Desktop\PythonCodes\final_project_streamlit\final_project_streamlit\customers.csv')
+    data = pd.read_csv('united_kingdom_retailer.csv')
+    data_2 = pd.read_csv('customers.csv')
     return data, data_2
 
 df, customers = load_data()
